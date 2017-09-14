@@ -4,7 +4,7 @@ setup(
   name = 'tensorflowonspark',
   packages = ['tensorflowonspark'],
   version = '1.0.2',
-  description = 'Deep learning with TensorFlow on Apache Spark clusters _ edit',
+  description = 'Deep learning with TensorFlow on Apache Spark clusters _ edit2',
   author = 'Yahoo, Inc.',
   url = 'https://github.com/yahoo/TensorFlowOnSpark',
   keywords = ['tensorflowonspark', 'tensorflow', 'spark', 'machine learning', 'yahoo'],
