@@ -45,7 +45,7 @@ def main_fun(argv, ctx):
       'Max number of batches to evaluate by default use all.')
 
   tf.app.flags.DEFINE_string(
-      'master', '', 'The address of the TensorFlow master to use.')
+      'main', '', 'The address of the TensorFlow main to use.')
 
   tf.app.flags.DEFINE_string(
       'checkpoint_path', '/tmp/tfmodel/',
@@ -190,7 +190,7 @@ def main_fun(argv, ctx):
     tf.logging.info('Evaluating %s' % checkpoint_path)
 
     slim.evaluation.evaluate_once(
-        master=FLAGS.master,
+        main=FLAGS.main,
         checkpoint_path=checkpoint_path,
         logdir=FLAGS.eval_dir,
         num_evals=num_batches,
