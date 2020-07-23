@@ -42,7 +42,7 @@ def main_fun(argv, ctx):
   tf.app.flags.DEFINE_boolean('rdma', False, 'Whether to use rdma.')
 
   tf.app.flags.DEFINE_string(
-      'master', '', 'The address of the TensorFlow master to use.')
+      'main', '', 'The address of the TensorFlow main to use.')
 
   tf.app.flags.DEFINE_string(
       'train_dir', '/tmp/tfmodel/',
@@ -592,7 +592,7 @@ def main_fun(argv, ctx):
       slim.learning.train(
           train_tensor,
           logdir=FLAGS.train_dir,
-          master=server.target,
+          main=server.target,
           is_chief=(FLAGS.task == 0),
           init_fn=_get_init_fn(),
           summary_op=summary_op,
